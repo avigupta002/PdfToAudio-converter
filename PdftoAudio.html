@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Enhanced AI Word Reader</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="PdftoAudio.css">
+</head>
+
+<body>
+    <h1>Enhanced AI Word Reader</h1>
+    <div id="controls">
+        <input type="file" id="pdfInput" accept=".pdf" />
+        <button onclick="processPDF()">Start Reading</button>
+        <button onclick="pauseReading()">Pause</button>
+        <button onclick="resumeReading()">Resume</button>
+        <button onclick="stopReading()">Stop</button>
+    </div>
+
+    <div id="displayWord">Upload a PDF to start</div>
+    <div id="pdfContainer"></div>
+    <div id="progress">
+        <div id="progressBar"></div>
+    </div>
+    <div id="speechRate">
+        <label id="speechRateLabel" for="rate">Speech Rate:</label>
+        <input type="range" id="rate" min="0.1" max="2" step="0.1" value="1">
+    </div>
+</body>
+<script src="PdftoAudio.js"></script>
+</html>
